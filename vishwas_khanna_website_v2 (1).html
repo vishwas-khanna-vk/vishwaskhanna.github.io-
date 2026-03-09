@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vishwas Khanna — Partner, Financial Services Advisory</title>
+  <meta name="description" content="Vishwas Khanna – Partner, Financial Services Risk Advisory. 19+ years of international advisory experience across UK, Europe, US, Middle East and Southeast Asia."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy:      #1C2D40;
+      --navy-deep: #111E2B;
+      --teal:      #1A6B6E;
+      --teal-mid:  #2A8C90;
+      --teal-pale: #D6ECED;
+      --teal-bg:   #EEF7F7;
+      --slate:     #4A6070;
+      --body:      #2A2A2A;
+      --soft:      #5A6470;
+      --rule:      #C8D8DC;
+      --off-white: #F6F9F9;
+      --white:     #FFFFFF;
+      --fd: 'Cormorant Garamond', Georgia, serif;
+      --fb: 'DM Sans', system-ui, sans-serif;
+      --mw: 1160px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--fb);font-size:15px;line-height:1.7;color:var(--body);background:var(--white);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--mw);margin:0 auto;padding:0 28px}
+    .teal{color:var(--teal-mid)}
+    .fade-up{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+    .fade-up.visible{opacity:1;transform:none}
+
+    /* NAV */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 28px;transition:background .3s,box-shadow .3s}
+    #nav.scrolled{background:rgba(17,30,43,.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+    .nav-in{max-width:var(--mw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:66px}
+    .nav-logo{font-family:var(--fd);font-size:1.1rem;font-weight:600;letter-spacing:.05em;color:var(--white);opacity:.9}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--teal-pale)}
+    .nav-cta{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-pale);border:1px solid rgba(214,236,237,.35);padding:8px 18px;border-radius:2px;transition:background .2s,color .2s}
+    .nav-cta:hover{background:var(--teal);color:var(--white);border-color:var(--teal)}
+
+    /* HERO */
+    #hero{min-height:100vh;background:var(--navy-deep);display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding:120px 28px 80px}
+    #hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 68% 40%,rgba(26,107,110,.18) 0%,transparent 60%),radial-gradient(ellipse 50% 80% at 10% 80%,rgba(26,107,110,.1) 0%,transparent 55%);pointer-events:none}
+    #hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),transparent)}
+    .hero-in{max-width:var(--mw);margin:0 auto;width:100%;position:relative;z-index:1}
+    .hero-label{font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:22px;display:flex;align-items:center;gap:12px}
+    .hero-label::before{content:'';display:block;width:32px;height:1px;background:var(--teal-mid)}
+    .hero-name{font-family:var(--fd);font-size:clamp(3rem,8vw,7rem);font-weight:300;line-height:1.02;color:var(--white);letter-spacing:-.01em;margin-bottom:26px}
+    .hero-name em{font-style:italic;font-weight:300;color:var(--teal-pale)}
+    .hero-tag{font-size:1rem;font-weight:300;color:rgba(255,255,255,.58);max-width:560px;line-height:1.8;margin-bottom:48px}
+    .hero-tag strong{color:rgba(255,255,255,.84);font-weight:400}
+    .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+    .btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:var(--white);padding:13px 26px;font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:background .2s,transform .15s}
+    .btn-p:hover{background:var(--teal-mid);transform:translateY(-1px)}
+    .btn-o{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.24);color:rgba(255,255,255,.72);padding:13px 26px;font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:border-color .2s,color .2s}
+    .btn-o:hover{border-color:var(--teal-pale);color:var(--teal-pale)}
+    .scroll-hint{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.28);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;animation:bob 2.4s ease-in-out infinite}
+    .scroll-hint::after{content:'';display:block;width:1px;height:34px;background:linear-gradient(to bottom,rgba(255,255,255,.28),transparent)}
+    @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+    /* KPI STRIP */
+    #kpis{background:var(--navy);border-bottom:1px solid rgba(255,255,255,.06)}
+    .kpi-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+    .kpi-cell{padding:34px 16px;text-align:center;border-right:1px solid rgba(255,255,255,.06);transition:background .2s;cursor:default}
+    .kpi-cell:last-child{border-right:none}
+    .kpi-cell:hover{background:rgba(26,107,110,.15)}
+    .kpi-val{font-family:var(--fd);font-size:2.7rem;font-weight:300;line-height:1;color:var(--white);margin-bottom:8px}
+    .kpi-lbl{font-size:.7rem;font-weight:400;letter-spacing:.06em;color:rgba(214,236,237,.58);line-height:1.4;text-transform:uppercase}
+
+    /* SECTION SHARED */
+    .sec{padding:96px 28px}
+    .sec-alt{background:var(--off-white)}
+    .sec-dark{background:var(--navy)}
+    .sec-hd{margin-bottom:60px}
+    .sec-label{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+    .sec-label::before{content:'';display:block;width:22px;height:1px;background:var(--teal-mid)}
+    .sec-dark .sec-label{color:var(--teal-pale)}
+    .sec-title{font-family:var(--fd);font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:400;color:var(--navy);line-height:1.15}
+    .sec-dark .sec-title{color:var(--white)}
+    .sec-rule{width:44px;height:2px;background:var(--teal);margin:18px 0 0}
+    .sec-intro{font-size:1rem;color:var(--soft);max-width:660px;line-height:1.8;margin-top:14px}
+    .sec-dark .sec-intro{color:rgba(255,255,255,.48)}
+
+    /* ABOUT */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:start}
+    .about-text p{font-size:1rem;line-height:1.85;color:var(--body);margin-bottom:18px}
+    .about-text p:last-child{margin-bottom:0}
+    .sidebar-lbl{font-size:.7rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:14px;margin-top:36px}
+    .sidebar-lbl:first-child{margin-top:0}
+    .spec-list{list-style:none;display:flex;flex-direction:column}
+    .spec-item{padding:11px 0;border-bottom:1px solid var(--rule);font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:12px;transition:color .2s,padding-left .2s;cursor:default}
+    .spec-item:first-child{border-top:1px solid var(--rule)}
+    .spec-item::before{content:'';flex-shrink:0;width:5px;height:5px;background:var(--teal);border-radius:50%}
+    .spec-item:hover{color:var(--teal);padding-left:5px}
+    .meta-line{font-size:.88rem;color:var(--soft)}
+
+    /* CAREER TIMELINE */
+    .timeline{display:flex;flex-direction:column}
+    .tl-item{display:grid;grid-template-columns:200px 1fr;position:relative}
+    .tl-left{padding:46px 38px 46px 0;text-align:right;position:relative}
+    .tl-left::after{content:'';position:absolute;top:0;right:-1px;bottom:0;width:1px;background:var(--rule)}
+    .tl-dot{position:absolute;right:-6px;top:56px;width:11px;height:11px;border-radius:50%;background:var(--teal);border:2px solid var(--white);box-shadow:0 0 0 2px var(--teal);z-index:1}
+    .tl-dates{font-size:.76rem;font-weight:500;letter-spacing:.06em;color:var(--teal-mid);text-transform:uppercase;margin-bottom:5px}
+    .tl-org{font-size:.8rem;color:var(--soft);line-height:1.4}
+    .tl-right{padding:46px 0 46px 46px}
+    .tl-item:not(:last-child) .tl-right{border-bottom:1px solid var(--teal-bg)}
+    .tl-role{font-family:var(--fd);font-size:1.5rem;font-weight:500;color:var(--navy);margin-bottom:4px;line-height:1.2}
+    .tl-loc{font-size:.76rem;color:var(--soft);margin-bottom:6px;letter-spacing:.04em}
+    .tl-promo{font-size:.78rem;color:var(--teal-mid);font-style:italic;margin-bottom:16px}
+    .tl-sum{font-size:.92rem;color:var(--body);line-height:1.75;margin-bottom:18px;max-width:680px}
+    .tl-buls{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .tl-buls li{font-size:.87rem;color:var(--body);line-height:1.65;padding-left:16px;position:relative;max-width:720px}
+    .tl-buls li::before{content:'–';position:absolute;left:0;color:var(--teal);font-weight:600}
+    .tl-buls strong{color:var(--navy);font-weight:600}
+    .tl-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+    .tl-tag{font-size:.68rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);background:var(--teal-bg);padding:4px 11px;border-radius:2px}
+    .tl-sub{font-size:.8rem;font-weight:600;color:var(--teal);margin:16px 0 6px;text-transform:uppercase;letter-spacing:.06em}
+
+    /* ENGAGEMENT CARDS */
+    .eng-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+    .eng-card{background:rgba(255,255,255,.04);padding:34px 30px;border-top:3px solid var(--teal-mid);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+    .eng-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,107,110,.06) 0%,transparent 55%);opacity:0;transition:opacity .3s}
+    .eng-card:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(0,0,0,.2)}
+    .eng-card:hover::before{opacity:1}
+    .eng-theme{font-size:.66rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-pale);margin-bottom:10px}
+    .eng-title{font-family:var(--fd);font-size:1.22rem;font-weight:500;color:var(--white);line-height:1.3;margin-bottom:7px}
+    .eng-client{font-size:.76rem;color:rgba(255,255,255,.42);margin-bottom:16px;font-style:italic}
+    .eng-body{font-size:.84rem;color:rgba(255,255,255,.63);line-height:1.7;margin-bottom:18px}
+    .eng-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .eng-tag{font-size:.66rem;font-weight:500;letter-spacing:.05em;color:var(--teal-pale);background:rgba(26,107,110,.28);padding:4px 10px;border-radius:2px;text-transform:uppercase}
+
+    /* EMINENCE */
+    .em-grid{display:grid;grid-template-columns:1fr 1fr;gap:76px}
+    .em-sec-title{font-family:var(--fd);font-size:1.2rem;font-weight:500;color:var(--navy);margin-bottom:26px}
+    .speak-list{display:flex;flex-direction:column}
+    .speak-item{display:grid;grid-template-columns:70px 1fr}
+    .speak-yr{font-family:var(--fd);font-size:1.05rem;font-weight:300;color:var(--teal-mid);padding:14px 14px 14px 0;text-align:right;border-right:1px solid var(--rule);position:relative}
+    .speak-yr::after{content:'';position:absolute;right:-4px;top:22px;width:7px;height:7px;border-radius:50%;background:var(--white);border:1px solid var(--teal)}
+    .speak-txt{padding:14px 0 14px 18px;font-size:.85rem;color:var(--body);line-height:1.6}
+    .speak-txt strong{color:var(--navy);font-weight:600}
+    .speak-txt a{color:var(--teal);transition:color .2s}
+    .speak-txt a:hover{color:var(--teal-mid);text-decoration:underline}
+    .pub-grp{margin-bottom:32px}
+    .pub-grp-lbl{font-size:.68rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+    .pub-list{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .pub-item{font-size:.84rem;line-height:1.55;color:var(--body);padding-left:13px;position:relative}
+    .pub-item::before{content:'–';position:absolute;left:0;color:var(--teal)}
+    .pub-item a{color:var(--teal);transition:color .2s}
+    .pub-item a:hover{color:var(--teal-mid);text-decoration:underline}
+
+    /* CREDENTIALS */
+    .cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+    .cred-card{padding:30px 26px;background:rgba(255,255,255,.04);border-top:2px solid rgba(255,255,255,.08);transition:border-color .2s,background .2s}
+    .cred-card:hover{border-color:var(--teal);background:rgba(26,107,110,.12)}
+    .cred-qual{font-family:var(--fd);font-size:1.08rem;font-weight:500;color:var(--white);margin-bottom:4px}
+    .cred-body{font-size:.79rem;color:rgba(255,255,255,.48);line-height:1.5}
+
+    /* COMMUNITY */
+    .comm-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+    .comm-card{padding:30px;background:var(--white);border-left:3px solid transparent;transition:border-color .2s,background .2s}
+    .comm-card:hover{border-color:var(--teal);background:var(--teal-bg)}
+    .comm-title{font-size:.9rem;font-weight:600;color:var(--navy);margin-bottom:3px}
+    .comm-dates{font-size:.72rem;color:var(--teal-mid);font-weight:500;letter-spacing:.05em;text-transform:uppercase;margin-bottom:9px}
+    .comm-desc{font-size:.82rem;color:var(--soft);line-height:1.65}
+
+    /* CONTACT */
+    #contact{background:var(--navy-deep);padding:96px 28px;text-align:center;position:relative;overflow:hidden}
+    #contact::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(26,107,110,.15) 0%,transparent 65%);pointer-events:none}
+    .contact-in{position:relative;z-index:1}
+    .contact-title{font-family:var(--fd);font-size:clamp(2rem,5vw,3.4rem);font-weight:300;color:var(--white);margin-bottom:14px;line-height:1.15}
+    .contact-title em{font-style:italic;color:var(--teal-pale)}
+    .contact-sub{font-size:.93rem;color:rgba(255,255,255,.48);margin-bottom:48px;line-height:1.8}
+    .contact-links{display:flex;justify-content:center;align-items:center;gap:36px;flex-wrap:wrap;margin-bottom:56px}
+    .contact-lnk{display:flex;align-items:center;gap:10px;font-size:.84rem;color:rgba(255,255,255,.58);transition:color .2s}
+    .contact-lnk:hover{color:var(--teal-pale)}
+    .contact-lnk svg{width:17px;height:17px;flex-shrink:0}
+    .footer-rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);margin:0 auto 26px;max-width:560px}
+    .footer-copy{font-size:.7rem;color:rgba(255,255,255,.22);letter-spacing:.06em}
+
+    /* RESPONSIVE */
+    @media(max-width:920px){
+      .kpi-grid{grid-template-columns:repeat(3,1fr)}
+      .kpi-cell:nth-child(3){border-right:none}
+      .about-grid,.em-grid{grid-template-columns:1fr;gap:48px}
+      .tl-item{grid-template-columns:1fr}
+      .tl-left{text-align:left;padding:28px 0 0}
+      .tl-left::after,.tl-dot{display:none}
+      .tl-right{padding:14px 0 36px}
+      .eng-grid{grid-template-columns:1fr}
+      .cred-grid{grid-template-columns:repeat(2,1fr)}
+      .comm-grid{grid-template-columns:1fr}
+      .nav-links{display:none}
+    }
+    @media(max-width:580px){
+      .kpi-grid{grid-template-columns:repeat(2,1fr)}
+      .kpi-cell:nth-child(5){grid-column:span 2;border-right:none}
+      .cred-grid{grid-template-columns:1fr}
+      .hero-btns{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-in">
+    <div class="nav-logo">VK</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#engagements">Engagements</a></li>
+      <li><a href="#eminence">Eminence</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#community">Community</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-in">
+    <div class="hero-label">Financial Services Partner</div>
+    <h1 class="hero-name">Vishwas<br><em>Khanna</em></h1>
+    <p class="hero-tag">
+      <strong>Partner, Financial Services Risk Advisory.</strong> 19+ years of international advisory
+      experience across the UK, Europe, the US, the Middle East and Southeast Asia.
+      Trusted by Boards, CROs and C-suite executives on regulatory transformation,
+      prudential strategy and governance.
+    </p>
+    <div class="hero-btns">
+      <a href="#career" class="btn-p">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        View Career
+      </a>
+      <a href="https://www.linkedin.com/in/vishwaskhanna/" target="_blank" rel="noopener" class="btn-o">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- KPI STRIP -->
+<div id="kpis">
+  <div class="kpi-grid">
+    <div class="kpi-cell fade-up"><div class="kpi-val">19+</div><div class="kpi-lbl">Years International<br>Experience</div></div>
+    <div class="kpi-cell fade-up"><div class="kpi-val">6×</div><div class="kpi-lbl">Revenue Growth<br>at Avantage Reply</div></div>
+    <div class="kpi-cell fade-up"><div class="kpi-val">8×</div><div class="kpi-lbl">EBT Growth<br>at Avantage Reply</div></div>
+    <div class="kpi-cell fade-up"><div class="kpi-val">500+</div><div class="kpi-lbl">Professionals<br>Led</div></div>
+    <div class="kpi-cell fade-up"><div class="kpi-val">40+</div><div class="kpi-lbl">ICAAPs / SREPs<br>Delivered</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="sec">
+  <div class="wrap">
+    <div class="sec-hd fade-up">
+      <div class="sec-label">Profile</div>
+      <h2 class="sec-title">Advisory Partner &amp;<br>Risk Strategist</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <p>Financial Services Partner with 19+ years of international advisory experience across the UK, the EU, the US, the Middle East and Southeast Asia. Recognised for building and scaling high-performing advisory practices, developing service propositions, and delivering complex, multi-jurisdiction programmes at Board and C-suite level.</p>
+        <p>Partner at Avantage Reply, where I have built the UK risk and regulatory advisory practice from the ground up and contributed to the firm's recognition as an FT UK Leading Management Consultant in both 2025 and 2026. Joined as Associate Partner in 2020 and promoted to Partner in 2023.</p>
+        <p>Former Director at Deloitte UK (and previously Deloitte India), where I led the EMEA SREP initiative and built the New Bank Authorisations practice. Former Manager in Prime Brokerage Risk Management at Morgan Stanley. Incoming Non-Executive Trustee, Leek Building Society Charitable Foundation (from April 2026). Currently completing the Financial Times Non-Executive Director Diploma.</p>
+      </div>
+      <div class="fade-up">
+        <div class="sidebar-lbl">Proven Specialisms</div>
+        <ul class="spec-list">
+          <li class="spec-item">Board &amp; C-Suite Advisory</li>
+          <li class="spec-item">Strategic Transformation Programmes</li>
+          <li class="spec-item">BCBS 239 &amp; Operational Resilience</li>
+          <li class="spec-item">Bank Operating Model Redesign</li>
+          <li class="spec-item">Regulatory Authorisations</li>
+          <li class="spec-item">Supervisory Review &amp; Evaluation Process (SREP)</li>
+          <li class="spec-item">Prudential Regulation — ICAAP / Basel / CRR</li>
+          <li class="spec-item">AI in Governance &amp; Risk Management</li>
+          <li class="spec-item">Public Speaking &amp; Thought Leadership</li>
+        </ul>
+        <div class="sidebar-lbl">Location</div>
+        <p class="meta-line">London, United Kingdom</p>
+        <div class="sidebar-lbl">Languages</div>
+        <p class="meta-line">English &nbsp;·&nbsp; Hindi &nbsp;·&nbsp; Punjabi</p>
+        <div class="sidebar-lbl">Citizenship</div>
+        <p class="meta-line">British &nbsp;·&nbsp; Overseas Citizen of India (OCI)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section id="career" class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-hd fade-up">
+      <div class="sec-label">Career</div>
+      <h2 class="sec-title">Professional Experience</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="timeline">
+
+      <!-- AVANTAGE REPLY -->
+      <div class="tl-item fade-up">
+        <div class="tl-left">
+          <div class="tl-dot"></div>
+          <div class="tl-dates">2020 – Present</div>
+          <div class="tl-org">Avantage Reply<br>London, UK</div>
+        </div>
+        <div class="tl-right">
+          <div class="tl-role">Partner</div>
+          <div class="tl-loc">Financial Services Risk Advisory</div>
+          <div class="tl-promo">Joined as Associate Partner (2020); promoted to Partner (2023)</div>
+          <p class="tl-sum">Responsible for UK FS risk advisory, driving business growth, client origination, delivery oversight and team leadership across regulatory and strategic transformation mandates. Contributed to firm recognition as FT UK Leading Management Consultant in 2025 and 2026.</p>
+          <div class="tl-sub">Commercial &amp; Practice Leadership</div>
+          <ul class="tl-buls">
+            <li>Built Avantage Reply's UK risk and regulatory advisory practice from the ground up — <strong>6× revenue growth, 8× EBT growth, 3× team expansion</strong> — while sustaining high client satisfaction and staff engagement scores.</li>
+            <li>Developed market-leading service propositions in <strong>BCBS 239 &amp; Data Governance, Operational Resilience &amp; DORA, Risk Operating Model Transformation</strong> and AI in Governance &amp; Risk Management.</li>
+            <li>Originated and delivered <strong>30+ client engagements</strong> across UK and EU Avantage Reply firms, spanning regulatory transformation, resilience and risk advisory.</li>
+            <li>Trusted advisor to Boards, CROs and C-suite at Tier 1 UK and EU banks; led multi-workstream programmes with teams of consultants spanning BCBS 239, DORA, prudential regulation and strategic risk transformation.</li>
+          </ul>
+          <div class="tl-sub">Client &amp; Delivery Leadership</div>
+          <ul class="tl-buls">
+            <li>Led <strong>end-to-end BCBS 239 implementation</strong> at a G-SIB, evidencing programme management rigour and deep technical expertise across Risk, Finance and Data functions — led a team of 20 consultants over 24+ months.</li>
+            <li>Served as <strong>Interim Board-level advisor</strong> at a G-SIB during a senior leadership transition; participated in all key Board and senior risk, finance and compliance committees; supported removal of ECB-imposed business restrictions — 12+ months.</li>
+            <li>Led a large-scale <strong>DORA programme</strong> across seven technical workstreams; managed 30+ consultants and coordinated directly with CEO, CFO, CRO and CIO across EU and US operations — 12 months.</li>
+            <li>Directed <strong>ESG Risk Programme</strong> for a global asset manager, coordinating ~50 stakeholders across six asset classes, working directly with the Deputy CEO — 18 months.</li>
+            <li>Led <strong>IRB Waiver Application</strong> for a major UK bank: 100+ stakeholders, 20+ advisors, 3,000 lines of regulatory gap analysis — resulting in PRA approval within two years.</li>
+            <li>Delivered <strong>20+ Board and Executive training sessions</strong> on BCBS 239, DORA, ESG, ICAAP/ILAAP and Fit &amp; Proper assessments.</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tl-tag">BCBS 239</span><span class="tl-tag">DORA</span><span class="tl-tag">Operational Resilience</span>
+            <span class="tl-tag">IRB</span><span class="tl-tag">ESG Risk</span><span class="tl-tag">Board Advisory</span><span class="tl-tag">New Bank Auth.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DELOITTE -->
+      <div class="tl-item fade-up">
+        <div class="tl-left">
+          <div class="tl-dot"></div>
+          <div class="tl-dates">2011 – 2020</div>
+          <div class="tl-org">Deloitte<br>London, UK (2013–2020)<br>Mumbai, India (2011–2013)</div>
+        </div>
+        <div class="tl-right">
+          <div class="tl-role">Director</div>
+          <div class="tl-loc">Financial Services Risk Advisory</div>
+          <p class="tl-sum">Senior leader within the Financial Services Risk practice, specialising in regulatory transformation and prudential strategy. Started in the India practice and moved to lead flagship programmes in the UK.</p>
+          <ul class="tl-buls">
+            <li>Led the <strong>EMEA SREP initiative</strong> — Deloitte's prudential supervisory proposition — coordinating multi-country teams across the UK, ECB and national competent authorities.</li>
+            <li>Built and led the <strong>New Bank Authorisations practice (2016–2020)</strong>: developed the proposition from the ground up, directly supported 5 PRA/FCA authorisation processes, and authored the definitive Deloitte publication series on UK bank licensing.</li>
+            <li>Led <strong>IRB Waiver Application</strong> for a leading UK bank, serving as programme lead and relationship manager across the full PRA engagement process.</li>
+            <li>Led <strong>Risk Target Operating Model redesign and Re-Authorisation Programme</strong> affecting 150+ personnel for a G-SIB; worked directly with the C-suite to deliver PRA re-authorisation within 12 months.</li>
+            <li>Delivered end-to-end <strong>Basel, CRR, ICAAP and stress testing programmes</strong> for G-SIBs, D-SIBs, SSM institutions and investment firms across UK, EMEA and APAC; worked on <strong>40+ ICAAP/SREP processes</strong> over 10 years.</li>
+            <li>Developed a <strong>Risk-Based Supervision Framework</strong> for the Indian banking regulator, providing a structured methodology for supervisory activities across the domestic banking sector.</li>
+            <li>Constructed a <strong>cost of funding model</strong> for the EBA Stress Testing submission for an SSM-supervised bank, ensuring methodological robustness and regulatory compliance.</li>
+            <li>Designed and delivered <strong>Risk Appetite Frameworks</strong> and Stress Testing policies and procedures for multiple banking institutions across jurisdictions.</li>
+            <li>Led the <strong>RCSA programme</strong> (operational risk management) for a leading Irish bank.</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tl-tag">SREP</span><span class="tl-tag">ICAAP</span><span class="tl-tag">New Bank Auth.</span>
+            <span class="tl-tag">Basel / CRR</span><span class="tl-tag">Risk TOM</span><span class="tl-tag">EBA Stress Test</span><span class="tl-tag">IRB</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MORGAN STANLEY -->
+      <div class="tl-item fade-up">
+        <div class="tl-left">
+          <div class="tl-dot"></div>
+          <div class="tl-dates">2007 – 2011</div>
+          <div class="tl-org">Morgan Stanley<br>Mumbai &amp; New York</div>
+        </div>
+        <div class="tl-right">
+          <div class="tl-role">Manager</div>
+          <div class="tl-loc">Global Hedge Fund Prime Brokerage Risk</div>
+          <p class="tl-sum">Managed counterparty and collateral risk across complex derivatives portfolios in Prime Brokerage, working across Mumbai and New York. Delivered extensive, accurate analytics to leadership during the Global Financial Crisis (2008).</p>
+          <ul class="tl-buls">
+            <li>Directed end-to-end delivery of <strong>50+ term agreements</strong> across prime brokerage clients, leading a team of three relationship and operations professionals.</li>
+            <li>Served as key relationship manager for lending agreements with a <strong>USD 2.5bn convertible bond arbitrage hedge fund</strong>, overseeing documentation, negotiation and ongoing client engagement.</li>
+            <li>Provided leverage advisory to a <strong>UK-based EUR 5bn equity hedge fund</strong> as part of a senior cross-functional team, assessing requirements and recommending appropriate financing structures.</li>
+            <li>Conceptualised and implemented a <strong>flexible margining methodology</strong>, enhancing the firm's risk management framework across the client book.</li>
+            <li>Developed and operationalised a <strong>daily performance monitoring capability</strong> for the prime brokerage client portfolio.</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tl-tag">Prime Brokerage</span><span class="tl-tag">Counterparty Risk</span>
+            <span class="tl-tag">Derivatives</span><span class="tl-tag">Hedge Fund Advisory</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DTZ -->
+      <div class="tl-item fade-up">
+        <div class="tl-left">
+          <div class="tl-dot"></div>
+          <div class="tl-dates">2007</div>
+          <div class="tl-org">DTZ<br>India</div>
+        </div>
+        <div class="tl-right">
+          <div class="tl-role">Associate</div>
+          <div class="tl-loc">Investment Advisory</div>
+          <p class="tl-sum">Real estate investment banking and advisory analyst covering a range of international clients. Gained experience in financial modelling, valuation and private equity assignments. Led feasibility and valuation work for Israel and Singapore-based investment funds.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENTS -->
+<section id="engagements" class="sec sec-dark">
+  <div class="wrap">
+    <div class="sec-hd fade-up">
+      <div class="sec-label">Selected Engagements</div>
+      <h2 class="sec-title">Representative Impact</h2>
+      <div class="sec-rule"></div>
+      <p class="sec-intro">Landmark engagements across regulatory transformation, capital, resilience and operating model mandates.</p>
+    </div>
+    <div class="eng-grid">
+      <div class="eng-card fade-up">
+        <div class="eng-theme">Programme Leadership</div>
+        <div class="eng-title">BCBS 239 Programme Implementation</div>
+        <div class="eng-client">SSM-supervised bank · Engagement Partner · Avantage Reply · 24+ months</div>
+        <p class="eng-body">Led end-to-end BCBS 239 implementation at a systemically important European bank under ECB supervision. Managed 20+ advisors; served as primary interface between senior leadership and ECB supervisory teams. Designed RDARR Framework and governance model from the ground up.</p>
+        <div class="eng-tags"><span class="eng-tag">C-suite advisory</span><span class="eng-tag">ECB engagement</span><span class="eng-tag">20+ advisors</span><span class="eng-tag">RDARR Framework</span></div>
+      </div>
+      <div class="eng-card fade-up">
+        <div class="eng-theme">Interim Executive Role</div>
+        <div class="eng-title">Interim CRO Advisory</div>
+        <div class="eng-client">G-SIB · Trusted Board-level advisor · Avantage Reply · 12+ months</div>
+        <p class="eng-body">Retained as trusted advisor to the CEO and CFO during a critical CRO transition while the bank faced a significant ECB supervisory action. Participated in all key Board and senior committee meetings. Supported response to ECB operational act letter, leading to removal of business restrictions.</p>
+        <div class="eng-tags"><span class="eng-tag">Board-level advisory</span><span class="eng-tag">ECB restrictions removed</span><span class="eng-tag">3LoD assessment</span></div>
+      </div>
+      <div class="eng-card fade-up">
+        <div class="eng-theme">Regulatory Transformation</div>
+        <div class="eng-title">Operational Resilience &amp; DORA Programme</div>
+        <div class="eng-client">SSM-supervised bank · Engagement Partner · Avantage Reply · 12 months</div>
+        <p class="eng-body">Led large-scale DORA implementation across seven technical workstreams. Managed 30+ consultants; coordinated directly with CEO, CFO, CRO and CIO across EU and US operations. Delivered all core workstreams on schedule.</p>
+        <div class="eng-tags"><span class="eng-tag">30+ advisors</span><span class="eng-tag">7 workstreams</span><span class="eng-tag">Multi-jurisdiction</span></div>
+      </div>
+      <div class="eng-card fade-up">
+        <div class="eng-theme">Capital &amp; Regulatory</div>
+        <div class="eng-title">IRB Waiver Application</div>
+        <div class="eng-client">Major UK bank · Engagement lead · Avantage Reply · ~18 months</div>
+        <p class="eng-body">Led the IRB Waiver Self-Assessment and Application. Engaged 100+ stakeholders, managed 20+ advisors through 3,000 lines of regulatory gap analysis. Delivered PRA approval for IRB status within two years — a significant capital efficiency milestone.</p>
+        <div class="eng-tags"><span class="eng-tag">IRB approved</span><span class="eng-tag">100+ stakeholders</span><span class="eng-tag">3,000-line analysis</span></div>
+      </div>
+      <div class="eng-card fade-up">
+        <div class="eng-theme">New Bank Licensing</div>
+        <div class="eng-title">New Bank Authorisations Practice</div>
+        <div class="eng-client">Deloitte UK · Director &amp; Practice Owner · 2016–2020</div>
+        <p class="eng-body">Built Deloitte's New Bank Authorisations practice from scratch during the UK challenger bank boom. Directly supported 5 successful PRA/FCA authorisation processes. Authored 10+ publications including the definitive Deloitte series on UK bank licensing.</p>
+        <div class="eng-tags"><span class="eng-tag">5 banks authorised</span><span class="eng-tag">Practice built</span><span class="eng-tag">10+ publications</span></div>
+      </div>
+      <div class="eng-card fade-up">
+        <div class="eng-theme">Operating Model</div>
+        <div class="eng-title">Risk TOM Redesign &amp; Re-Authorisation</div>
+        <div class="eng-client">G-SIB Investment Bank · Engagement lead · Deloitte / Avantage Reply</div>
+        <p class="eng-body">Led Risk Target Operating Model redesign and Re-Authorisation Programme affecting 150+ personnel. Worked directly with the C-suite to deliver PRA re-authorisation within 12 months. Endorsed by both Group and local CRO.</p>
+        <div class="eng-tags"><span class="eng-tag">150+ roles</span><span class="eng-tag">PRA re-authorisation</span><span class="eng-tag">12-month delivery</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMINENCE -->
+<section id="eminence" class="sec">
+  <div class="wrap">
+    <div class="sec-hd fade-up">
+      <div class="sec-label">Industry Eminence</div>
+      <h2 class="sec-title">Thought Leadership &amp;<br>Speaking</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="em-grid">
+
+      <!-- SPEAKING -->
+      <div class="fade-up">
+        <div class="em-sec-title">Conference &amp; Speaking Leadership</div>
+        <div class="speak-list">
+          <div class="speak-item"><div class="speak-yr">2025</div><div class="speak-txt"><strong>Operational Resilience Conference</strong> — 16 September 2025</div></div>
+          <div class="speak-item"><div class="speak-yr">2023</div><div class="speak-txt"><strong>RiskMinds EMEA</strong> — flagship annual conference of 1,000+ CROs &amp; risk practitioners &nbsp;·&nbsp; <strong>VERMEG Industry Conference</strong> &nbsp;·&nbsp; <strong>Women in Banking &amp; Finance</strong> Panel &nbsp;·&nbsp; <strong>Reply Cloud in FS Report</strong> launch</div></div>
+          <div class="speak-item"><div class="speak-yr">2021–23</div><div class="speak-txt"><strong>Co-Chair, UK Finance CRO Network</strong> — monthly forums with 30–40 UK CROs on technical and regulatory topics</div></div>
+          <div class="speak-item"><div class="speak-yr">2021</div><div class="speak-txt">Featured on <a href="https://podcasts.apple.com/gb/podcast/episode-2-vishwas-khanna/id1550648626?i=1000506753704" target="_blank" rel="noopener"><strong>The Risk Podcast, Episode 2</strong></a> (Ingham Jones)</div></div>
+          <div class="speak-item"><div class="speak-yr">2020</div><div class="speak-txt"><strong>Guest Lecturer</strong>, The Rise of Fintech — Hertie School of Governance, Berlin (April &amp; October) &nbsp;·&nbsp; Moderated CRO Panel, PRMIA</div></div>
+          <div class="speak-item"><div class="speak-yr">2019</div><div class="speak-txt"><strong>Lead Speaker &amp; Panel Chair</strong>, Deloitte Ireland Inaugural CRO Club &nbsp;·&nbsp; Fintech CFOs Breakfast Briefing, Deloitte &nbsp;·&nbsp; Lead Speaker, Deloitte New Bank Event (July) &nbsp;·&nbsp; Panel Member, Activeviam FRTB Event &nbsp;·&nbsp; Fintech Seminar, Kings College &amp; Fordham University</div></div>
+          <div class="speak-item"><div class="speak-yr">2018</div><div class="speak-txt"><strong>Moderator</strong>, Deloitte Banking Union Summit, Frankfurt &nbsp;·&nbsp; Lead Speaker, Deloitte New Bank Event — addressed C-suite on authorisation process and regulatory expectations</div></div>
+          <div class="speak-item"><div class="speak-yr">2017</div><div class="speak-txt"><strong>BARA Indonesia ICAAP Seminar</strong>, Prague — addressed Indonesian Bank Boards and the Ambassador of Indonesia to the Czech Republic</div></div>
+          <div class="speak-item"><div class="speak-yr">2016</div><div class="speak-txt"><strong>Deloitte Malta SREP Seminar</strong> — alongside Director of Banking Supervision at MFSA and former Chief Executive Director at BaFin, Germany &nbsp;·&nbsp; VERMEG industry conference</div></div>
+          <div class="speak-item"><div class="speak-yr">2015</div><div class="speak-txt"><strong>Lead Organiser</strong>, Deloitte EMEA SREP Seminar, Frankfurt &nbsp;·&nbsp; Speaker, 'Stress Testing for Investment Firms' &amp; 'ICAAP and Stress Testing for Investment Firms', London &nbsp;·&nbsp; Guest Speaker, IES Business School, Mumbai</div></div>
+          <div class="speak-item"><div class="speak-yr">2013</div><div class="speak-txt">Speaker, 'Risk Management in Indian Banks', B-School, Mumbai</div></div>
+          <div class="speak-item"><div class="speak-yr">2011–13</div><div class="speak-txt">Visiting Faculty, Fixed Income Securities Analysis (Mumbai MBA programme) &nbsp;·&nbsp; Member, Admissions Panel for Post-Graduate programmes</div></div>
+        </div>
+      </div>
+
+      <!-- PUBLICATIONS -->
+      <div class="fade-up">
+        <div class="em-sec-title">Publications &amp; Thought Leadership</div>
+
+        <div class="pub-grp">
+          <div class="pub-grp-lbl">Financial Times &amp; FT Partner Content</div>
+          <ul class="pub-list">
+            <li class="pub-item"><a href="https://www.ft.com/partnercontent/reply/future-ready-finance-tackling-the-transformation-challenge.html" target="_blank" rel="noopener">Future-ready finance: tackling the transformation challenge</a> — FT Partner Content by Reply</li>
+          </ul>
+        </div>
+
+        <div class="pub-grp">
+          <div class="pub-grp-lbl">Avantage Reply</div>
+          <ul class="pub-list">
+            <li class="pub-item"><a href="https://www.reply.com/avantage-reply/en/Shared%20Documents/CRO_100_Day_Plan_for_Impact_Scale.pdf" target="_blank" rel="noopener">CRO 100-Day Plan for Impact at Scale</a></li>
+            <li class="pub-item"><a href="https://www.reply.com/en/cloud-computing/cloud-adoption-in-financial-services-interviews" target="_blank" rel="noopener">Cloud in Financial Services Report</a> — presented at RiskMinds EMEA 2023</li>
+            <li class="pub-item"><a href="https://www.reply.com/avantage-reply/en/Shared%20Documents/Negative-interest-rates-Are-banks-ready.pdf" target="_blank" rel="noopener">Negative Interest Rates: Are Banks Ready?</a></li>
+            <li class="pub-item">The Role of Technology in Operational Resilience &nbsp;·&nbsp; AI in Risk Functions &nbsp;·&nbsp; PRA Competitiveness &amp; Growth</li>
+          </ul>
+        </div>
+
+        <div class="pub-grp">
+          <div class="pub-grp-lbl">Deloitte Insights &amp; Financial Services Blog</div>
+          <ul class="pub-list">
+            <li class="pub-item"><a href="https://www2.deloitte.com/uk/en/pages/financial-services/articles/from-dream-to-reality-obtaining-a-banking-licence.html" target="_blank" rel="noopener">From Dream to Reality: Obtaining a Banking Licence</a></li>
+            <li class="pub-item"><a href="https://ukfinancialservicesinsights.deloitte.com/post/102f6r3/new-banks-time-to-grow-up" target="_blank" rel="noopener">New Banks: Time to Grow Up</a> &nbsp;·&nbsp; <a href="https://blogs.deloitte.co.uk/financialservices/2019/02/a-ride-up-capital-hill-.html" target="_blank" rel="noopener">A Ride Up Capital Hill</a> &nbsp;·&nbsp; <a href="https://ukfinancialservicesinsights.deloitte.com/post/102fe7s/banking-competition-towards-stability-or-fragility" target="_blank" rel="noopener">Banking Competition: Towards Stability or Fragility?</a></li>
+            <li class="pub-item"><a href="https://blogs.deloitte.co.uk/financialservices/2018/10/achieving-authorisation-top-tips-for-getting-over-the-line.html" target="_blank" rel="noopener">Achieving Authorisation: Top Tips</a> &nbsp;·&nbsp; <a href="https://blogs.deloitte.co.uk/financialservices/2019/01/developing-a-persuasive-regulatory-business-plan-rbp.html" target="_blank" rel="noopener">Developing a Persuasive Regulatory Business Plan</a> &nbsp;·&nbsp; <a href="http://blogs.deloitte.co.uk/financialservices/2018/07/so-you-think-you-need-to-be-a-bank.html" target="_blank" rel="noopener">So You Think You Need to Be a Bank</a></li>
+            <li class="pub-item"><a href="https://blogs.deloitte.co.uk/financialservices/2019/06/piercing-the-veil-what-will-a-shift-towards-greater-transparency-on-pillar-2-mean-for-eurozone-banks.html" target="_blank" rel="noopener">Piercing the Veil: Pillar 2 Transparency</a> &nbsp;·&nbsp; <a href="https://blogs.deloitte.co.uk/financialservices/2018/06/a-drive-to-standardise.html" target="_blank" rel="noopener">A Drive to Standardise</a> &nbsp;·&nbsp; <a href="https://ukfinancialservicesinsights.deloitte.com/post/102fm28/fate-of-the-furious-review-and-findings-for-fast-growing-firms" target="_blank" rel="noopener">Fate of the Furious: Fast-Growing Firms</a></li>
+            <li class="pub-item"><a href="https://blogs.deloitte.co.uk/financialservices/2019/03/fca-considers-banning-certain-commission-models-following-motor-finance-review.html" target="_blank" rel="noopener">Car Finance in the Headlights</a></li>
+          </ul>
+        </div>
+
+        <div class="pub-grp">
+          <div class="pub-grp-lbl">Podcast &amp; External Media</div>
+          <ul class="pub-list">
+            <li class="pub-item"><a href="https://podcasts.apple.com/gb/podcast/episode-2-vishwas-khanna/id1550648626?i=1000506753704" target="_blank" rel="noopener">The Risk Podcast S1 E2 (2021)</a> &amp; <a href="https://creators.spotify.com/pod/profile/theriskpodcast/episodes/Episode-2--Vishwas-Khanna-ephru1" target="_blank" rel="noopener">S2 E1 (2024)</a> — Ingham Jones: risk leadership, AI in risk and the CRO agenda</li>
+            <li class="pub-item"><a href="https://www.fintechfutures.com/2019/11/explained-the-ecbs-role-in-the-banking-licence-process-uks-licensing-procedures/" target="_blank" rel="noopener">Fintech Futures: The ECB's Role in the Banking Licence Process</a> (2019)</li>
+            <li class="pub-item"><a href="https://www.theotcspace.com/content/car-finance-headlights-what-prudential-and-conduct-risks-do-uk-regulators-see" target="_blank" rel="noopener">The OTC Space: Car Finance — Prudential and Conduct Risks for UK Regulators</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials" class="sec sec-dark">
+  <div class="wrap">
+    <div class="sec-hd fade-up">
+      <div class="sec-label">Credentials</div>
+      <h2 class="sec-title">Education &amp; Professional<br>Development</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="cred-grid">
+      <div class="cred-card fade-up"><div class="cred-qual">FT NED Diploma</div><div class="cred-body">Financial Times Non-Executive Director Programme<br><em>Expected 2026</em></div></div>
+      <div class="cred-card fade-up"><div class="cred-qual">MBA</div><div class="cred-body">Indian Institute of Foreign Trade, New Delhi, 2007<br>Exchange: Hanken School of Economics, Helsinki</div></div>
+      <div class="cred-card fade-up"><div class="cred-qual">FRM®</div><div class="cred-body">Financial Risk Manager<br>Global Association of Risk Professionals (GARP), 2009</div></div>
+      <div class="cred-card fade-up"><div class="cred-qual">CISI Diploma</div><div class="cred-body">Regulation &amp; Compliance<br>Chartered Institute for Securities &amp; Investment, 2015</div></div>
+      <div class="cred-card fade-up"><div class="cred-qual">Reply Partner Programme</div><div class="cred-body">ESCP Business School, Paris, 2023</div></div>
+      <div class="cred-card fade-up"><div class="cred-qual">IoD CPD</div><div class="cred-body">Directors' Skills Days<br>Institute of Directors, 2021–22</div></div>
+      <div class="cred-card fade-up"><div class="cred-qual">BCom (Hons)</div><div class="cred-body">Shri Ram College of Commerce<br>University of Delhi, 2005</div></div>
+      <div class="cred-card fade-up"><div class="cred-qual">Licentiate · ICSI</div><div class="cred-body">Institute of Company Secretaries of India, 2006</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community" class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-hd fade-up">
+      <div class="sec-label">Community &amp; Leadership</div>
+      <h2 class="sec-title">Non-Executive &amp;<br>Community Roles</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="comm-grid">
+      <div class="comm-card fade-up">
+        <div class="comm-title">Non-Executive Trustee · Leek Building Society Charitable Foundation</div>
+        <div class="comm-dates">From April 2026</div>
+        <p class="comm-desc">Appointed to support the Foundation's community development mission in the Staffordshire region, contributing independent advisory and governance expertise.</p>
+      </div>
+      <div class="comm-card fade-up">
+        <div class="comm-title">Non-Executive Advisor · Miricyl</div>
+        <div class="comm-dates">2020 – 2023</div>
+        <p class="comm-desc">Advised the CEO and broader team of a mental health technology platform (Miricyl) on strategy, outreach and impact for teenagers and young adults.</p>
+      </div>
+      <div class="comm-card fade-up">
+        <div class="comm-title">Visiting Professor · Mumbai Educational Trust (MET)</div>
+        <div class="comm-dates">2011 – 2012</div>
+        <p class="comm-desc">Delivered a guest professorship on the MBA programme teaching Fixed Income Securities Analysis; also served as Member of the Admissions Panel for Post-Graduate programmes.</p>
+      </div>
+      <div class="comm-card fade-up">
+        <div class="comm-title">Career Coach</div>
+        <div class="comm-dates">2009 – 2013</div>
+        <p class="comm-desc">Mentored graduate students across career strategy and professional development at a graduate career counselling institution.</p>
+      </div>
+      <div class="comm-card fade-up">
+        <div class="comm-title">English Heritage Volunteer</div>
+        <div class="comm-dates">2019 – 2020</div>
+        <p class="comm-desc">Supported public tours at Apsley House and Wellington Arch, London.</p>
+      </div>
+      <div class="comm-card fade-up">
+        <div class="comm-title">DePaul Oval Sleepout &nbsp;·&nbsp; RAF Museum Volunteer &nbsp;·&nbsp; HelpAge India</div>
+        <div class="comm-dates">Various</div>
+        <p class="comm-desc">Oval Sleepout to raise awareness of rough sleeping in the UK (DePaul) &nbsp;·&nbsp; Spitfire Experience, RAF Museum London (2016) &nbsp;·&nbsp; Six-month social awareness programme as part of MBA Social Initiative at IIFT.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-in">
+    <h2 class="contact-title">Let's <em>connect</em></h2>
+    <p class="contact-sub">Available for board advisory, senior leadership conversations and thought leadership collaboration.</p>
+    <div class="contact-links">
+      <a href="mailto:vishwas.khanna@hotmail.com" class="contact-lnk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        vishwas.khanna@hotmail.com
+      </a>
+      <a href="tel:+447867607227" class="contact-lnk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.72 11.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +44 7867 607227
+      </a>
+      <a href="https://www.linkedin.com/in/vishwaskhanna/" target="_blank" rel="noopener" class="contact-lnk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        linkedin.com/in/vishwaskhanna
+      </a>
+    </div>
+    <div class="footer-rule"></div>
+    <p class="footer-copy">© 2026 Vishwas Khanna &nbsp;·&nbsp; London, United Kingdom</p>
+  </div>
+</section>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40), {passive:true});
+
+  // Fade-up observer
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const siblings = Array.from(e.target.parentElement.querySelectorAll('.fade-up:not(.visible)'));
+        siblings.forEach((el, i) => setTimeout(() => el.classList.add('visible'), i * 75));
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.08, rootMargin: '0px 0px -36px 0px'});
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  // Active nav link
+  const secs = document.querySelectorAll('section[id],div[id]');
+  const navAs = document.querySelectorAll('.nav-links a');
+  new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting)
+        navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+    });
+  }, {threshold: 0.35}).observe && secs.forEach(s =>
+    new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting)
+          navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+      });
+    }, {threshold: 0.35}).observe(s)
+  );
+</script>
+</body>
+</html>
